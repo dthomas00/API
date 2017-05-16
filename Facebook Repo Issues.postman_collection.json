@@ -1,0 +1,630 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Facebook Repo Issues",
+		"_postman_id": "32ffc559-bc25-8bdf-91d0-e423f29e7366",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"https://api.github.com/repos/facebook/react\"] = responseBody.has(\"https://api.github.com/repos/facebook/react\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Basic GET request"
+			},
+			"response": []
+		},
+		{
+			"name": "GET  a single issue from Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Issue 9685\"] = responseBody.has(\"9685\");",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/9685\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Basic single issue request"
+			},
+			"response": []
+		},
+		{
+			"name": "POST an issue to Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"",
+							"tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;",
+							"",
+							"tests[\"dthomas00 is author\"] = responseBody.has(\"dthomas00\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues\n",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"New Test post\",\r\n  \"body\": \"This is a basic post test post.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Basic post to the repository using 3 parameters"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH an issue to Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"tests[\"dthomas00 is author\"] = responseBody.has(\"dthomas00\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/9688\n",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Basic PATCH from the post before"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all comments from the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/comments\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Gets all of the comments from the repository"
+			},
+			"response": []
+		},
+		{
+			"name": "GET a single comment from the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/comments/18643992\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Gets a single comment from the repo"
+			},
+			"response": []
+		},
+		{
+			"name": "GET list of events for the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/events\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Gets all events"
+			},
+			"response": []
+		},
+		{
+			"name": "GET a single event from the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/events/1081690968\n",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Gets a single event from the repo"
+			},
+			"response": []
+		},
+		{
+			"name": "GET all labels for issue 8890 in the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"This is post-patch\",\r\n  \"body\": \"This is a basic post changed to patch test.\",\r\n  \"assignee\": \"dthomas00\"\r\n}"
+				},
+				"description": "Gets all the labels for an issue"
+			},
+			"response": []
+		},
+		{
+			"name": "POST a label to issue 8890 in the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"bug\",\r\n  \"color\": \"f29513\"\r\n}"
+				},
+				"description": "Post a label to issue 8890\n\nTest will fail, not authorized"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a label to issue 8890 in the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels/labelname",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete a label to issue 8890\n\nTest will fail, not authorized"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT replace all labels to issue 8890 in the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  \"Label1\",\r\n  \"Label2\"\r\n]"
+				},
+				"description": "Replace a label to issue 8890\n\nTest will fail, not authorized"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE all labels from issue 8890 in the Facebook React repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "dthomas00",
+						"password": "GitHub01!",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Delete all labels to issue 8890\n\nTest will fail, not authorized"
+			},
+			"response": []
+		}
+	]
+}
