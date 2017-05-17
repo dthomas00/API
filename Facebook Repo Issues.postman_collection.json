@@ -25,24 +25,9 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues\n",
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
-						"description": ""
-					}
-				],
+				"header": [],
 				"body": {},
 				"description": "Basic GET request"
 			},
@@ -66,24 +51,9 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/9685\n",
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
-						"description": ""
-					}
-				],
+				"header": [],
 				"body": {},
 				"description": "Basic single issue request"
 			},
@@ -109,26 +79,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues\n",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -150,34 +106,19 @@
 						"exec": [
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
-							"",
-							"tests[\"dthomas00 is author\"] = responseBody.has(\"dthomas00\");"
+							"tests[\"Status code is 403\"] = responseCode.code === 403;",
+							""
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/9688\n",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -207,26 +148,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/comments\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -256,26 +183,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/comments/18643992\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -305,26 +218,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/events\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -354,26 +253,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/events/1081690968\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -403,26 +288,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -451,26 +322,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -499,26 +356,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels/labelname",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -547,26 +390,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -595,26 +424,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8890/labels",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],

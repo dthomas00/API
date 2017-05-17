@@ -25,26 +25,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Accept",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -63,21 +49,12 @@
 						"exec": [
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850",
 				"method": "PATCH",
 				"header": [
@@ -89,11 +66,6 @@
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -113,32 +85,18 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/lock",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Length",
 						"value": "Zero",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -155,30 +113,15 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/lock",
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
-						"description": ""
-					}
-				],
+				"header": [],
 				"body": {},
 				"description": "Another failed test, but as you can see it is set up correctly."
 			},
@@ -192,32 +135,18 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/assignees",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -237,32 +166,18 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/assignees",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -292,26 +207,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/comments",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -343,26 +244,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/comments/276069259",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -384,38 +271,20 @@
 						"exec": [
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
-							"tests[\"Issue 8850\"] = responseBody.has(\"8850\");",
+							"tests[\"Status code is 401\"] = responseCode.code === 401;",
 							"",
-							"tests[\"Comment has dthomas00\"] = responseBody.has(\"dthomas00\");",
-							"",
-							"tests[\"Status code is 201\"] = responseCode.code === 201;",
-							"",
-							"tests[\"Successful POST request\"] = responseCode.code === 201 || responseCode.code === 202;"
+							""
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/comments",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -437,36 +306,18 @@
 						"exec": [
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
-							"tests[\"Issue 8850\"] = responseBody.has(\"8850\");",
-							"",
-							"tests[\"Comment 301375660\"] = responseBody.has(\"dthomas00\");",
-							"",
-							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+							"tests[\"Status code is 404\"] = responseCode.code === 404;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/comments/301375660",
 				"method": "PATCH",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -495,26 +346,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/events",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -543,26 +380,12 @@
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/labels\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -585,32 +408,18 @@
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
 							"",
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/labels\n",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -633,32 +442,18 @@
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
 							"",
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/labels/Status:%20Unconfirmed\n",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -681,32 +476,18 @@
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
 							"",
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/labels\n",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -729,32 +510,18 @@
 							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
 							"",
 							"",
-							"tests[\"Status code is 403\"] = responseCode.code === 403;"
+							"tests[\"Status code is 401\"] = responseCode.code === 401;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/labels\n",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
@@ -774,33 +541,20 @@
 					"script": {
 						"type": "text/javascript",
 						"exec": [
-							"tests[\"Response time is less than 800ms\"] = responseTime < 800;",
-							""
+							"tests[\"Response time is less than 1000ms\"] = responseTime < 1000;",
+							"",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
 						]
 					}
 				}
 			],
 			"request": {
-				"auth": {
-					"type": "basic",
-					"basic": {
-						"username": "dthomas00",
-						"password": "GitHub01!",
-						"saveHelperData": true,
-						"showPassword": false
-					}
-				},
 				"url": "https://api.github.com/repos/facebook/react/issues/8850/timeline\n",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Accept",
 						"value": "application/vnd.github.mockingbird-preview",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "Basic ZHRob21hczAwOkdpdEh1YjAxIQ==",
 						"description": ""
 					}
 				],
