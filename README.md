@@ -21,4 +21,4 @@ Thanks!
 
 -Dustin Thomas
 
-NEW - Added a new collection to the repository. Timestamp will use an API chain to pull the current CST and post it to both of my repositories. Check the results by going into the repository and looking at the issue comments.
+NEW - Added a new collection to the repository. Timestamp will use an API chain to pull the current CST from timezonedb.com and post it to both of my Github repositories. These tests all have the correct authorization headers (my own repositories) so they can be run as many times as needed. Check the results by going into the repository and looking at the issue comments.
