@@ -1,0 +1,177 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Timestamp Chain",
+		"_postman_id": "c565e726-7e13-6598-453c-fe6f3ea40125",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Timestamp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"if (responseCode.code === 200)",
+							"",
+							"try {",
+							"    var currenttime = JSON.parse(responseBody),",
+							"    timestamp = currenttime.formatted;",
+							"}",
+							"",
+							"catch(timestamp) {",
+							"    console.log(timestamp);",
+							"}",
+							"",
+							"",
+							"",
+							"postman.setGlobalVariable(\"timestamp\", timestamp);",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "http://api.timezonedb.com/v2/get-time-zone?key=ZQ1509GH856J&format=json&by=zone&zone=America/North_Dakota/Center",
+					"protocol": "http",
+					"host": [
+						"api",
+						"timezonedb",
+						"com"
+					],
+					"path": [
+						"v2",
+						"get-time-zone"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "ZQ1509GH856J",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "format",
+							"value": "json",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "by",
+							"value": "zone",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "zone",
+							"value": "America/North_Dakota/Center",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post to API Repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var timestamp = globals.timestamp;",
+							"",
+							"postman.setGlobalVariable(\"timestamp\", timestamp);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.github.com/repos/dthomas00/API/issues/1/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAx",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\": \"NewTimestamp\",\n\"body\": \"{{timestamp}}\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post to Selenium Repo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 201\"] = responseCode.code === 201;",
+							"",
+							"tests[\"Response time is less than 200ms\"] = responseTime < 200;"
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var timestamp = globals.timestamp;",
+							"",
+							"postman.setGlobalVariable(\"timestamp\", timestamp);"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.github.com/repos/dthomas00/Selenium/issues/3/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZHRob21hczAwOkdpdEh1YjAx",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\": \"NewTimestamp\",\n\"body\": \"{{timestamp}}\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
